@@ -7,7 +7,7 @@ http.createServer((req,res)=>{
 }).listen(8001, ()=>console.log("Node server started at port 8001"));
 
 //Express Server
-let student=[]
+let Port_node = process.env.PORT || 8002;
 let express = require('express');
 let app = express();
 app.get('/',(req,res)=>{
@@ -19,4 +19,4 @@ app.get('/Home', (req,res)=>{
     res.send("Home Express page")
 });
 
-app.listen(8002, ()=>console.log("Express server started at port 8002"));
+app.listen(Port_node, ()=>console.log("Express server started at port "+Port_node));
